@@ -1,5 +1,5 @@
 # SMHookMemory
-### iOS Lightweight Hooking Framework for arm64/arm64e devices
+### iOS Lightweight Hooking Framework for ARM64
 ---
 
 ## How to Install:
