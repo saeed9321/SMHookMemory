@@ -7,7 +7,7 @@
 2. Copy ```libSMHookMemory.dylib``` to your ```theos/lib``` folder.
 3. Add SMHookMemory to your MakeFile:
          ```$(TWEAK_NAME)_LIBRARIES = SMHookMemory```
-4. Include the header file ```SMHookMemory.h``` to your project
+4. Copy & Include the header file ```SMHookMemory.h``` to your project
 
 #
 ## How to Use:
