@@ -1,5 +1,5 @@
 # SMHookMemory
-### iOS Lightweight Hooking Library for ARM64
+### iOS Lightweight Hooking Library for ARM64/ARM64e
 ---
 
 ## How to Install:
@@ -11,6 +11,20 @@
 
 #
 ## How to Use:
+#### ```void SMInstrumentSVC80(char *imageName, void* handle);```
+* **imageName**: dylib image name you would like to patch.
+* **handle**     : Pointer to handle function.
+
+### Example:
+```
+void handle(void){
+    char* path = (char*)ctx.x0;
+    uint64_t syscall_num = ctx.x16;
+    NSLog("SVC #0x80 - syscall_number:%llu - path:%s", syscall_num, path);
+}
+
+SMInstrumentSVC80("sampleApp", &handle);
+```
 
 #### ```void SMInstrument(char *imageName, uint64_t addr, void* handle);```
 * **imageName**: dylib image name you would like to patch.
@@ -20,7 +34,7 @@
 ### Example:
 ```
 void handle(void){
-    uint64_t x0 = ctx.general.regs.x0;
+    uint64_t x0 = ctx.x0;
     NSLog("Value @ register X0: %llu", x0);
 }
 
