@@ -12,7 +12,7 @@
 #
 ## How to Use:
 #### ```void SMInstrumentSVC80(char *imageName, void* handle);```
-* **imageName**: dylib image name you would like to patch.
+* **imageName**: dylib image name you would like to intrument all svc 80 calls.
 * **handle**     : Pointer to handle function.
 
 ### Example:
