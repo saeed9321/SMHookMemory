@@ -1,0 +1,9 @@
+Package: com.said.smhookmemory
+Name: SMHookMemory
+Version: 1.1.0
+Architecture: iphoneos-arm
+Description: Lightweight Hooking Library for ARM64/ARM64e Devices
+Maintainer: Said Al Mujaini
+Author: Said Al Mujaini
+Section: System
+Tag: role::developer
